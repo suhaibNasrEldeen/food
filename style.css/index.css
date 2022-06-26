@@ -1,0 +1,219 @@
+/*START var  */
+:root {
+  --section-pading: 20px;
+  --transition: 0.5s;
+}
+/*START var  */
+header {
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: black;
+}
+header h1 {
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 15px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+header ul {
+  display: flex;
+  align-items: center;
+}
+header ul li {
+  padding: 10px;
+}
+header ul li a {
+  text-decoration: none;
+  color: white;
+  transition: var(--transition);
+}
+header h1:hover,
+header a:hover {
+  background-color: #ccc;
+  color: black;
+  padding-right: 2px;
+  padding-left: 2px;
+  border-radius: 10px;
+}
+@media (max-width: 770px) {
+  header {
+    justify-content: center;
+  }
+  header ul {
+    display: none;
+  }
+}
+/* END header */
+/* START landing */
+.landing img {
+  width: 100%;
+}
+.landing p {
+  font-size: 26px;
+  position: relative;
+  top: -64px;
+  right: 0px;
+  color: #eff;
+}
+/* END landing */
+/* START ABOUT */
+.about {
+  padding-top: var(--section-pading);
+  padding-bottom: var(--section-pading);
+  border-bottom: 1px solid #eee;
+}
+.about .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.about .container img {
+  width: 40%;
+  opacity: 0.75;
+}
+.about .container .text {
+  flex-basis: 50%;
+}
+.about .container .text h2 {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 39px;
+  text-transform: capitalize;
+}
+.about .container .text h6 {
+  text-align: center;
+  margin: 10px 0;
+}
+.about .container .text p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.about .container .text p.one span {
+  padding: 4px;
+  background-color: #f1f1f1;
+  color: black;
+  cursor: pointer;
+}
+.about .container .text p.tow {
+  color: #777;
+}
+@media (max-width: 770px) {
+  .about .container img {
+    display: none;
+  }
+  .about .container .text {
+    flex-basis: 100%;
+  }
+}
+/* :END ABOUT */
+/* START MENU */
+.menu {
+  padding-top: var(--section-pading);
+  padding-bottom: var(--section-pading);
+  border-bottom: 1px solid #eee;
+}
+.menu .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.menu img {
+  width: 40%;
+  opacity: 0.75;
+}
+.menu .container .text h2 {
+  font-size: 35px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 23px;
+}
+.menu .container .card {
+  margin-bottom: 50px;
+  transition: var(--transition);
+}
+.menu .container .card h4 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+.menu .container .card p {
+  color: #757575;
+}
+@media (max-width: 990px) {
+  .menu .text {
+    width: 100%;
+    text-align: center;
+  }
+  .menu .text .cards .card {
+    border: 1px solid #777;
+    border-radius: 10px 100px;
+    transition: var(--transition);
+  }
+  .menu .text .cards .card:hover {
+    background-color: black;
+    border-radius: initial;
+  }
+  .menu img {
+    width: 100%;
+  }
+}
+@media (max-width: 520px) {
+  .menu .text .cards .card {
+    border: none;
+  }
+}
+
+/* END MENU */
+/* START CONTACT */
+.contact {
+  padding-top: var(--section-pading);
+  padding-bottom: var(--section-pading);
+  border-bottom: 1px solid #eee;
+}
+.contact h1 {
+  font-size: 36px;
+}
+.contact .text p {
+  padding-top: var(--section-pading);
+  padding-bottom: var(--section-pading);
+  font-size: 20px;
+}
+.contact .text span {
+  color: #607d8b;
+  font-weight: bold;
+  /* font-size: 20px; */
+}
+.contact form {
+  background-color: #121212;
+}
+.contact form input:not(last-child) {
+  display: block;
+  margin-bottom: var(--section-pading);
+  border-color: transparent transparent #ccc transparent;
+  border-width: 1px;
+  width: 100%;
+  background-color: none;
+  background-color: #121212;
+  padding: 10px 0;
+  color: #777;
+}
+.contact form input:last-child {
+  width: initial;
+  border: none;
+  background-color: #777;
+  padding: 9px;
+  padding-left: 8px;
+  text-transform: uppercase;
+  color: #565353;
+}
+.contact form input:last-child:hover {
+  background-color: #eee;
+}
+.contact form input:focus {
+  border-bottom: none;
+}
+/* END CONTACT */
